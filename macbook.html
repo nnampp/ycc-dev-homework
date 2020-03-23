@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-----------------------------Navigation Bar----------------------------->
+
+    <div class="nav">
+        <ul class="navbar">
+              <li class="act">Macbook</li>
+              <li><a href="surface.html">Surface</a></li>
+              <li><a href="swift.html">Swift</a></li>
+              <li><a href="xps.html">XPS</a></li>
+              <li><a href="zenbook.html">Zenbook</a></li>
+        </ul>
+    </div>
+    
+    <!----------------------------------Order--------------------------------->
+
+    <!--Product pic-->
+    
+    <div class="orderpic">
+        <p><a href="index.html" class="lmo bck">&#60; Back</a></p><br><br>
+        <img src="pics/mac2x.png" alt="MacBook Pro" style="width:45vw;height:45vh;margin-left:-8vw;margin-top:5vh;">
+    </div>
+
+    <!--Product detail-->
+    <div class="orderdet">
+        <!--detail-->
+
+        <p style="position:absolute;font-family:'robotomedium';font-size:6vh;">Customize your MacBook Pro</p>
+
+        <p style="position:absolute;font-family:Arial, Helvetica, sans-serif;font-size:2.5vh;color:#707070;margin-top:16vh;">
+            1.4GHz quad‑core 8th‑generation Intel Core i5 processor, Turbo Boost<br>
+            up to 3.9GHz 
+            <br><br>
+            8GB 2133MHz LPDDR3 memory 
+            <br><br>
+            Retina display with True Tone 
+            <br><br>
+            Intel Iris Plus Graphics 645 
+            <br><br>
+            Two Thunderbolt 3 ports 
+            <br><br>
+            Touch Bar and Touch ID 
+            <br><br>
+            Backlit Keyboard - US English
+        </p>
+
+        <!--Storage-->
+
+        <p style="position:absolute;font-family:'robotomedium';font-size:5.5vh;margin-top:62vh;">Storage</p>
+
+        <div class="storbtn" style="margin-top:72vh;" id="btn01" onclick="choosebtn(1)">
+            <p style="margin:2.7vh 0 3vh 3vh;float:left;font-family:'robotolight';font-size:3.25vh;color:#757575;">125GB SSD Storage</p>
+        </div>
+        <div class="storbtn" style="margin-top:2vh;" id="btn02" onclick="choosebtn(2)">
+            <p style="margin:2.7vh 0 3vh 3vh;float:left;font-family:'robotolight';font-size:3.25vh;color:#757575;">512GB SSD Storage</p>
+        </div>
+        <div class="storbtn" style="margin-top:2vh;" id="btn03" onclick="choosebtn(3)">
+            <p style="margin:2.7vh 0 3vh 3vh;float:left;font-family:'robotolight';font-size:3.25vh;color:#757575;">1TB SSD Storage</p>
+        </div>
+
+        <!--Price-->
+
+        <p style="position:absolute;font-family:'robotomedium';font-size:5.5vh;margin-top:5vh;">Pricing</p>
+        <p style="position:absolute;font-family:'robotomedium';font-size:5.75vh;margin-top:14vh;">64,900 Baht</p>
+        <form action="confirm.html"><button class="purbtn">Purchase</button></form>
+    </div>
+
+    <!--------------------------------Footer-------------------------------->
+
+    <div class="footer">
+        The content, information, opinions, and viewpoints contained in these educational materials are those of the authors or contributors of such materials.<br> 
+        While the American Society of Transplantation (AST) and its committees take great care to screen the credentials of the contributors and make every<br> 
+        attempt to review the contents, AST MAKES NO WARRANTY, EXPRESSED OR IMPLIED, as to the completeness or accuracy of the content contained in<br> 
+        the educational materials or on this website. The reader of these materials uses these materials at his or her own risk, and AST shall not be responsible<br> 
+        for any errors, omissions, or inaccuracies in these materials, whether arising through negligence, oversight, or otherwise. Reliance on any information<br> 
+        appearing on this site is strictly at your own risk.
+  </div>
+
+</body>
+
+<!--JS for choose storage button-->
+
+<script>
+function choosebtn(n) {
+    if(n == 1) { 
+        document.getElementById("btn01").className = "storbtn-sel";
+        document.getElementById("btn02").className = "storbtn";
+        document.getElementById("btn03").className = "storbtn";
+    }
+    else if(n == 2) {
+        document.getElementById("btn02").className = "storbtn-sel";
+        document.getElementById("btn01").className = "storbtn";
+        document.getElementById("btn03").className = "storbtn";
+    }
+    else if(n == 3) { 
+        document.getElementById("btn03").className = "storbtn-sel";
+        document.getElementById("btn01").className = "storbtn";
+        document.getElementById("btn02").className = "storbtn";
+    }
+}
+</script>
+</html>
